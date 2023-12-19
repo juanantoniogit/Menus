@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvf3jmlpjumgs"]
+
+[ext_resource type="Script" path="res://MenuPrincipal/menu_principal.gd" id="1_8u1ws"]
+[ext_resource type="Texture2D" uid="uid://w8ajab8bdt26" path="res://MenuCreditos/fondo.000.jpg" id="2_ydl86"]
+
+[node name="Menu principal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8u1ws")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(43, 561)
+texture = ExtResource("2_ydl86")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 55.0
+offset_right = 1084.0
+offset_bottom = 86.0
+text = "Creditos"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
