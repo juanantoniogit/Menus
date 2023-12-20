@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://l77wo8dvhojp"]
+
+[ext_resource type="Script" path="res://Juego/Nivel_001/Nivel 001.gd" id="1_tfrd1"]
+
+[node name="Nivel 001" type="Node2D"]
+script = ExtResource("1_tfrd1")
+
+[node name="Pausa" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Pausa ||"
+
+[connection signal="pressed" from="Pausa" to="." method="_on_pausa_pressed"]
