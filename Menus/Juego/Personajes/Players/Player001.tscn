@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckfgvy7ogwscg"]
+
+[ext_resource type="Script" path="res://Juego/Personajes/Players/Player001.gd" id="1_y0ald"]
+[ext_resource type="Texture2D" uid="uid://cuy7t370qf1bu" path="res://icon.svg" id="2_j8mcs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1i8t0"]
+
+[node name="Player001" type="CharacterBody2D"]
+script = ExtResource("1_y0ald")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1i8t0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(189, 175)
+texture = ExtResource("2_j8mcs")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://l77wo8dvhojp"]
+
+[ext_resource type="Script" path="res://Juego/Nivel_001/Nivel 001.gd" id="1_tfrd1"]
+[ext_resource type="PackedScene" uid="uid://ckfgvy7ogwscg" path="res://Juego/Personajes/Players/Player001.tscn" id="2_cqi2w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nh84d"]
+distance = -350.0
+
+[node name="Nivel 001" type="Node2D"]
+script = ExtResource("1_tfrd1")
+
+[node name="Pausa" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Pausa ||"
+
+[node name="Player001" parent="." instance=ExtResource("2_cqi2w")]
+position = Vector2(189, 132)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(188, -3)
+shape = SubResource("WorldBoundaryShape2D_nh84d")
+
+[connection signal="pressed" from="Pausa" to="." method="_on_pausa_pressed"]
